@@ -13,3 +13,10 @@ headline_text = " ".join(headline.find_all(
     text=lambda t: not isinstance(t, Comment)))
 
 print(headline_text)
+
+# Summary
+summary_lines = doc.find_all(
+    class_='article-level-five__summary--li content--li', limit=2)
+
+for line in summary_lines:
+    print(line.string)
